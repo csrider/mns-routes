@@ -1,0 +1,86 @@
+<HTML>
+<HEAD><LINK REL=StyleSheet HREF=help_style_sheet.css TYPE=text/css></HEAD>
+<TITLE>MessageNet Connections Help</TITLE>
+<BODY>
+<!-- PAGE BREAK --><P class="title">
+<A NAME=page_graphical_annunciator></A>
+
+<TABLE width="99%" border=0><TR><TD width="160" ><img style="width:1.52in; height:0.47in; margin-right: 2em;" width=146 height=45 src="gifs/smlogo_cropped.jpg"></TD><TD align="right" valign="bottom" style="font-family:Calibri; font-size: 24px; margin-top: 15px;">Graphical Annunciator</TD></TR><TR><TD width="100%" colspan=2 bgcolor="#47d0d9"height="5px" style="height:5px; background-color: #47d0d9;"></TD></TR></TABLE><P> 
+
+<A HREF="pagehelp.html">MessageNet Connections Manual</A>
+<BR>
+
+<style type="text/css">
+	ul	{margin-top:.5em; margin-bottom:2em;}
+	ul ul	{margin-top:0; margin-bottom:0;}
+	li	{margin-bottom:2px;}
+	li img	{vertical-align:middle; margin-top:-2px; margin-bottom:2px; margin-right:5px;}
+	img.indent	{margin-left:25px;}
+</style>
+
+<p></p>
+
+<div style="font-weight:bold;">Overview &amp; Graphical Annunciator Concepts:</div>
+<ul>
+	<li>A graphical annunciator (MediaPort Panel GA) is able to display safety-related devices (like smoke detectors, fire pull stations, fire extinguishers, etc.) and their current state on a map (similar to <a href="pagehelp.html#page_routing_manager" target="_blank">Routing</a> functionality)
+		<ul>
+		<li>Properly placed safety devices are able to be displayed on the map, and also indicate their current state upon an alarm event (automatic message launch) or manual message launch.</li>
+		<li>You must enter the Graphical Annunciator management screen through a message definition/editor screen - NOT the locations screen. Remember that in order to display a GA screen on a MediaPort Panel GA, you will be defining a GRAPHICAL ANNUNCIATOR type message.</li>
+		</ul>
+		</li>
+	<li>The system also supports multiple floorplan or map graphics, each with their own potential set of device icons. Even though a single LCD-GA device, by its nature, is 
+	only capable of showing one graphic at a time (full screen), additional map graphics can be associated with a given message, and be told whether to display (active) 
+	or not (inactive). This allows a full range of flexibility in how you create and manage all of your possible maps and devices through any situation.
+		<ul>
+		<li>You may need to associate maps with a message (especially if it is brand new). This can be done by selecting from already-loaded system maps, or by uploading your own map, via the <img src="gifs/map_new.gif"> button.</li>
+		</ul>
+		</li>
+</ul>
+
+<div style="font-weight:bold;">Security Considerations and Access to Graphical Annunciator Configuration:</div>
+<ul>
+	<li>To gain access, you MUST be a member of the "SYS ROUTING CONTROL" user list.</li>
+	<li>Being a member of the "SYS LOCATIONS ACCESS LIST" or any other "LOCATIONS"-type of list will <strong>NOT</strong> gain you access.</li>
+	<li>The device(s) that the message will be sent to must be of the "MediaPort Panel GA" type.</li>
+</ul>
+
+<div style="font-weight:bold;">Message Requirements When Configuring Graphical Annunciators:</div>
+<ul>
+	<li>Create/save a message, as you would any normal message to an LCD device, but with the following special considerations:
+		<ul>
+		<li>Be sure that the <strong>Sign Group</strong> contains at least one device of the "MediaPort Panel GA" type.</li>
+		<li>Select a <strong>Media Type</strong> of "LCD Location Map".</li>
+		<li>Select an <strong>Alert Status</strong> of "Graphical Annunciator."</li>
+		</ul></li>
+	<li>Once the proper Media Type has been defined, and if you have the proper user list clearance, there will be a button available after saving the message, labeled "Edit Map Features." 
+	You may then click that button to enter the Graphical Annunciator management screen for the particular message.</li>
+</ul>
+
+<div style="font-weight:bold;">Accessing the Graphical Annunciator Management Screen:</div>
+<p>After clicking <button style="margin-left:4px;">Edit Map Features</button> in the message editor screen (only available if you have proper security clearance), you will be taken to a screen looking very much like the usual Locations screen. 
+If you make any device changes here, be sure to click <img src="gifs/done.gif"> to save your changes, just to be safe!</p>
+<p>You may move, or place device icons and assign their previously defined names to them (see <a href="pagehelp.html#page_locations_manager" target="_blank">help for Locations</a> - it is the same process).</p> 
+<p style="font-style:italic;">Tip: You may simply move your mouse cursor over most buttons or icons to get an instant help pop-up explaining its status or function. This will be your best bet for understanding the options available in this tool!</p>
+
+<div style="font-weight:bold; margin-bottom:3px;">Graphical Annunciator Management Screen - NO Map(s) Associated With Message Yet:</div>
+<div><img src="gifs/gaScreenNew.png" class="indent"></div>
+<ul>
+	<li>Depending on your security clearance, you may or may not see any of these icons.</li>
+	<li><img src="gifs/map_new.gif">Click this button to associate a map with the message (you may use an existing map that's in the system, or you may upload a new map altogether).</li>
+</ul>
+
+<div style="font-weight:bold; margin-bottom:3px;">Graphical Annunciator Management Screen - Map(s) Associated With Message:</div>
+<div><img src="gifs/gaScreenAssociated.png" class="indent"></div>
+<ul>
+	<li><img src="gifs/map_mediaport_connected.gif"><img src="gifs/map_pull_station_idle.gif"><img src="gifs/map_water_flow_alarming.gif"><img src="gifs/map_smoke_detector_alarming.gif"><img src="gifs/map_motion_detector_alarming.gif"><img src="gifs/map_sound_meter_alarming.gif"><img src="gifs/map_duct_detector_alarming.gif"><img src="gifs/map_door_open_alarming.gif">
+		Click any of these icons to place a safety device icon on the map (do not drag, just click).</li>
+	<li><img src="gifs/map_edit.gif">Click to enable editing of a device icon that's already placed on the map (first click this, then click the icon you wish to edit).</li>
+	<li><img src="gifs/map_delete.gif">Click to remove a device icon from the map (first click this, then click the icon you wish to remove).</li>
+	<li><img src="gifs/map_done.gif">Click to save any changes made to the screen.</li>
+	<li><img src="gifs/showMaps.gif">Click to choose an active/default map for a safety device icon (first click this, then click a safety device icon). If a safety device goes into alarm, and it is represented by an icon in this system, it's possible to display it 
+		(on its map) on a MediaPort GA display. This button allows you to manage what map will display on the LCD, in the case that a safety icon happens to be placed on multiple maps (an LCD can only display one map per message).</li>
+	<li><span style="background-color:#d6d6d6;">GA Default:<input type="checkbox"></span>Check this box to make the current map the default for the message.</li>
+	<li><img src="gifs/map_new.gif">Click this button to associate additional map(s) with the message.</li>
+	<li><img src="gifs/map_delete_map.gif">Click this button to dis-associate the current map from the message (this will not delete the map from the system).</li>
+	<li><img src="gifs/map_controls.gif">Click this button to edit certain properties of the current map.</li>
+</ul>

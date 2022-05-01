@@ -1,0 +1,113 @@
+<HTML>
+<HEAD><LINK REL=StyleSheet HREF=help_style_sheet.css TYPE=text/css></HEAD>
+<TITLE>MessageNet Connections Help</TITLE>
+<BODY>
+SM_INSERT_PAGE_BREAK
+<A NAME=page_routing_manager></A>
+
+SM_INSERT_HEADER
+
+<A HREF="pagehelp.html">MessageNet Connections Manual</A>
+<BR>
+
+<style type="text/css">
+	ul	{margin-top:.5em; margin-bottom:2em;}
+	ul ul	{margin-top:0; margin-bottom:0;}
+	li	{margin-bottom:2px;}
+	li img	{vertical-align:middle; margin-top:-2px; margin-bottom:2px; margin-right:5px;}
+	img.indent	{margin-left:25px;}
+</style>
+
+<p>This screen allows you to draw egress routes for emergency types of messages that can then be shown on the LCD component of a MediaPort Graphical Annunciator (GA) device, customized to its particular location. 
+Once the initial setup is complete, routes will automatically display on their assigned display device, for a particular message launch.</p>
+
+<div style="font-weight:bold;">Overview &amp; Routing Concepts:</div>
+<ul>
+	<li>A graphical annunciator (MediaPort Panel GA) is able to display egress routes and locations/status of safety devices (smoke detectors, pull stations, etc.) on a map.
+		<ul>
+		<li>A map can display with or without routes (see Message Requirements below, for more details), in order to facilitate communication of the message to all types of audiences.</li>
+		<li>Properly placed safety devices (smoke detectors, pull stations, etc.) are able to be displayed on the map, and also indicate their current state upon event trigger or otherwise.</li>
+		</ul></li>
+	<li>Routes are message-based... That is, when you work with routes, you are working within the scope of a single particular message at a time, no matter the number  
+	of graphical annunciator display devices or routes that you may be working with.
+		<ul>
+		<li>You must enter the Routing Manager through a message definition/editor screen - NOT the locations screen.</li>
+		<li>A single message can cause multiple graphical annunciator devices to each display their own pertinent maps and unique set of routes.</li>
+		</ul></li>
+	<li>Upon message launch, pre-drawn routes will be generated on each individual graphical annunciator LCD device, specific to its location. Each device is 
+	capable of automatically displaying a "You Are Here" icon and determining which pre-defined, associated routes it will display along with it. This way, people who 
+	happen to be in the area of that device will see an egress route(s) tailored specifically for that location.</li>
+	<li>A single display device may have none, one or many routes (this might, for example, be useful in the case where a single LCD is being used in a large room 
+	that contains many possible exit paths). This might also be useful if your policies require having alternate routes. Each route can have its own 
+	colors, sizes, etc., to help distinguish it per whatever requirements you may have.</li>
+	<li>The system also supports multiple floorplan or map graphics, each with their own potential set of routes. Even though a single LCD-GA device, by its nature, is 
+	only capable of showing one graphic at a time (full screen), additional graphics (and routes) can be entered into the system, and be told whether to display (active) 
+	or not (inactive). This allows a full range of flexibility in how you create and manage all of your possible egress routes through any situation.</li>
+</ul>
+
+<div style="font-weight:bold;">Security Considerations and Access to Routing:</div>
+<ul>
+	<li>To gain access to routing, you MUST be a member of the "SYS ROUTING CONTROL" user list.</li>
+	<li>Being a member of the "SYS LOCATIONS ACCESS LIST" or any other "LOCATIONS"-type of list will <strong>NOT</strong> gain you access to the routing manager.</li>
+	<li>The device(s) that the message will be sent to must be of the "MediaPort Panel GA" type.</li>
+</ul>
+
+<div style="font-weight:bold;">Message Requirements When Working with Routes:</div>
+<ul>
+	<li>Create/save a message, as you would any normal message to an LCD device, but with the following special considerations:
+		<ul>
+		<li>Be sure that the <strong>Sign Group</strong> contains at least one device of the "MediaPort Panel GA" type.</li>
+		<li>Select a <strong>Media Type</strong> of "LCD Location Map", and be sure to import/define the proper floorplan graphic.</li>
+		<li>Select an <strong>Alert Status</strong> of "Emergency," "Shelter," or "Evacuate" in order to display routes.</li>
+		<li>Otherwise, select an <strong>Alert Status</strong> of "Graphical Annunciator" to make the message display a map without routes (useful for response personnel who may be more concerned with a higher-level view of a situation). Note that this 
+		mode will still display safety devices (and their alarm states) and "You-are-here" icons (if applicable). It is everything but the routes.</li>
+		</ul></li>
+	<li>Once the proper Media Type has been defined, and if you have the proper user list clearance, there will be a button available after saving the message, labeled "Edit Map Features." 
+	You may then click that button to enter the Routing Manager screen for the particular message. This is the <strong>only</strong> way to enter the Routing Manager.</li>
+</ul>
+
+<div style="font-weight:bold;">Accessing the Routing Manager:</div>
+<p>After clicking <button style="margin-left:4px;">Edit Map Features</button> in the message editor screen (only available if you have proper security clearance), you will be taken to a screen looking very much like the usual Locations screen. 
+However, in this context, it is referred to as the "Device Manager" screen. The purpose of the Device Manager is solely to offer you the convenience of placing LCD/device icons directly without having to 
+change screens and go back to the Locations screen, explicitly. If you make any device changes here, be sure to click <img src="gifs/done.gif"> to save your changes, before proceeding to the Routing Manager.</p>
+<p>Once you have finished moving, or placing LCD devices and assigning their names to them (see <a href="pagehelp.html#page_locations_manager" target="_blank">help for Locations</a> - it is the same process) -- or they have already been placed and named -- 
+then you may continue to the Route Manager screen by clicking on the <img src="gifs/routeMgrBtn.gif"> button.</p>
+<p style="font-style:italic;">Tip: Once you're on the Routing Manager screen, you may simply move your mouse cursor over most buttons or items to get an instant help pop-up explaining its status or function. This will be your best bet for understanding the plethora of options available in this tool!</p>
+
+<div style="font-weight:bold; margin-bottom:3px;">Routing Manager Screen (Toolbar):</div>
+<div><img src="gifs/routingToolbar.gif" class="indent"></div>
+<ul>
+	<li><strong>Message:</strong> This indicates the message you are currently working in <em>(remember that routes are message-based)</em>.</li>
+	<li><img src="gifs/map_route_add.gif">Click this button to add a new route, and then click an LCD icon to select it for adding the new route to. Routes must have an associated LCD!</li>
+	<li><img src="gifs/showRoute.gif">Click this button to view existing route(s), and then click an LCD icon to select it and view the route(s) that it will display for this message.</li>
+	<li><img src="gifs/more.gif">Only available if a multi-route LCD has been selected, click to view additional/alternate routes for the selected LCD.</li>
+	<li><img src="gifs/maps_button.gif">Only available if a LCD is currently selected (with route showing) that has additional map(s)/route(s) defined, use this to activate/deactivate 
+	various possible maps/routes.</li>
+	<li><img src="gifs/routingColorChooserRed.gif">Only available when adding/editing a route, click to choose the color of the route path line.</li>
+	<li><img src="gifs/routingThickChooser.gif">Only available when adding/editing a route, click to choose the thickness of the route path line. The darker highlight indicates
+	the currently selected/applied thickness... the middle "normal" thickness is the default.</li>
+	<li><img src="gifs/straighten1.gif">Only available when adding/editing a route, click to turn on/off the horizontal and vertical straight line assist. This will help you 
+	make perfectly horizontal or perfectly vertical line segments. It works similar to a "snap-to" that is used by many other software applications. Note that you 
+	may wish to turn this off if you are placing points in very close proximity to each other, or drawing tight curves. The checkbox will tick/untick to indicate current status.</li>
+	<li><img src="gifs/saveRoute.gif">Only available when adding/editing a route and it has not been saved, click to save the route as it currently appears on the screen.</li>
+	<li><img src="gifs/undo.gif">Only available if a route is currently showing, click to erase the last line segment. Repeat as many times as desired.</li>
+	<li><img src="gifs/map_route_delete.gif">Only available if a route is currently showing, click to delete the route that is currently showing on the screen. Deletes cannot be undone.</li>
+	<li><img src="gifs/help2.gif">Click to view a quick-help guide.</li>
+	<li><img src="gifs/refresh.gif">Click to refresh the routing manager page. This reloads all route data for the message; so it may be useful, for example, if you are 
+	collaborating with another person in drawing a route, and wish to see what he or she has saved so far. If a route is currently showing when you click this, 
+	that route will be reloaded on your screen to its most recently saved state. Any unsaved changes to the route, on your screen, will be lost.</li>
+	<li><img src="gifs/deviceMgrBtn.gif">Click to return to the device manager screen. Any unsaved changes will be lost.</li>
+	<li><img src="gifs/cancel_red_x.gif">Click to close the routing manager window altogether. Any unsaved changes will be lost.</li>
+</ul>
+
+<div style="font-weight:bold; margin-bottom:3px;">Routing Manager Screen (Drawing Canvas Area):</div>
+<div><img src="gifs/routingCanvasSample.gif" class="indent"></div>
+<ul>
+	<li><img src="gifs/map_mediaport_with_route_connected.gif">LCD with associated routes for the message. This animated icon will display if the LCD has one or more routes associated with it for the current message. 
+	You may then, for example, click <img src="gifs/showRoute.gif"> and then this icon to view its route(s).</li>
+	<li><img src="gifs/map_mediaport_map_off_with_route_connected.gif">LCD with associated routes for the message, but the currently loaded map (and any visible routes) is not set as active - meaning this will not display when the message is launched. 
+	You may then, for example, click <img src="gifs/showRoute.gif"> and then this icon to view its currently inactive route(s). Furthermore, you may then click <img src="gifs/maps_button.gif"> to change which maps/routes are active or not.</li>
+	<li><img src="gifs/map_mediaport_connected.gif">LCD without any associated routes for the active message.</li>
+	<li>Note: There are also "not-connected" versions of these that would display if the LCD is not currently online or connected. Here is what those would look like: <img src="gifs/map_mediaport_with_route_not_connected.gif">, 
+	<img src="gifs/map_mediaport_map_off_with_route_not_connected.gif">, and <img src="gifs/map_mediaport_not_connected.gif"></li>
+</ul>
